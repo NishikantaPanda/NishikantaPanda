@@ -13,7 +13,7 @@ import com.vtiger.objectRepo.OrgPage;
 
 public class CreateOrganizationTest extends BaseClass{
 
-	@Test(retryAnalyzer = com.vtiger.genericUtilities.RetryAnalyserImplementation.class)
+	@Test(retryAnalyzer = com.vtiger.genericUtilities.RetryAnalyserImplementation.class,groups = "RegressionSuite")
 	public void createOrganization()throws EncryptedDocumentException, IOException, InterruptedException  {
 		
 	HomePage hp = new HomePage(driver);

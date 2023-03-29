@@ -17,7 +17,7 @@ public class CreateContactWithOrganizationTest extends BaseClass {
 	
 		
 		
-		@Test(retryAnalyzer = com.vtiger.genericUtilities.RetryAnalyserImplementation.class)
+		@Test(retryAnalyzer = com.vtiger.genericUtilities.RetryAnalyserImplementation.class,groups="SmokeSuite")
 		public void createContactWithOrg() throws EncryptedDocumentException, IOException, InterruptedException {
 			
 			// After Execution of @BeforeMethod HomePage will Open

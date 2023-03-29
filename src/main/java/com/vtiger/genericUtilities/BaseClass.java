@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -34,7 +33,7 @@ public class BaseClass {
 	
 	public WebDriver driver;
 	
-	@BeforeSuite
+	@BeforeSuite(groups = {"SmokeSuite","RegressionSuite"})
 	public void bsConfig()
 	{
 	   System.out.println("----- Database Connection successfull -----");
@@ -42,8 +41,8 @@ public class BaseClass {
     
 	//@Parameters("browser")
 	//@BeforeTest
-	@BeforeClass
-	public void bcConfig(/*String BROWSER*/) throws IOException
+	@BeforeClass(groups = {"SmokeSuite","RegressionSuite"})
+	public void bcConfig() throws IOException
 	{
 		String URL = pUtil.readDataFromPropertyFile("url");
 		String BROWSER = pUtil.readDataFromPropertyFile("browser");
@@ -73,7 +72,7 @@ public class BaseClass {
 		
 	}
 	
-	@BeforeMethod
+	@BeforeMethod(groups = {"SmokeSuite","RegressionSuite"})
 	public void bmConfig() throws IOException
 	{
 		String USERNAME = pUtil.readDataFromPropertyFile("username");
@@ -85,7 +84,7 @@ public class BaseClass {
 		System.out.println("----- Login successful -----");
 	}
 	
-	@AfterMethod
+	@AfterMethod(groups = {"SmokeSuite","RegressionSuite"})
 	public void amConfig()
 	{
 		HomePage hp = new HomePage(driver);
@@ -94,14 +93,14 @@ public class BaseClass {
 		System.out.println("----- Logout successful -----");
 	}
 	
-	@AfterClass
+	@AfterClass(groups = {"SmokeSuite","RegressionSuite"})
 	public void acConfig()
 	{
 		driver.quit();
 		System.out.println("----- Browser Closed successfully -----");
 	}
 	
-	@AfterSuite
+	@AfterSuite(groups = {"SmokeSuite","RegressionSuite"})
 	public void asConfig()
 	{
 		System.out.println("----- Database Dis-Connection successfull -----");
