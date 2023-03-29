@@ -3,37 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.practice.Automation.TestCase001">
+      <class name="org.vtiger.Contacts.CreateContactWithOrganizationTest">
         <methods>
-          <include name="Test001"/>
+          <include name="createContactWithOrg"/>
+          <include name="asConfig"/>
+          <include name="acConfig"/>
+          <include name="bsConfig"/>
+          <include name="amConfig"/>
+          <include name="bmConfig"/>
+          <include name="bcConfig"/>
         </methods>
-      </class> <!-- com.practice.Automation.TestCase001 -->
-      <class name="com.practice.Automation.TestCase003">
-        <methods>
-          <include name="Test03"/>
-        </methods>
-      </class> <!-- com.practice.Automation.TestCase003 -->
-      <class name="com.practice.Automation.TestCase004">
-        <methods>
-          <include name="Test04"/>
-        </methods>
-      </class> <!-- com.practice.Automation.TestCase004 -->
-      <class name="com.practice.Automation.AssertPractice">
-        <methods>
-          <include name="methodTwo"/>
-          <include name="methodOne"/>
-        </methods>
-      </class> <!-- com.practice.Automation.AssertPractice -->
-      <class name="com.practice.Automation.RetryAnalyzerPractice">
-        <methods>
-          <include name="test"/>
-        </methods>
-      </class> <!-- com.practice.Automation.RetryAnalyzerPractice -->
-      <class name="com.practice.Automation.TestCase002">
-        <methods>
-          <include name="Test02"/>
-        </methods>
-      </class> <!-- com.practice.Automation.TestCase002 -->
+      </class> <!-- org.vtiger.Contacts.CreateContactWithOrganizationTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
