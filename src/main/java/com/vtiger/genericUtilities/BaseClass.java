@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -54,10 +55,10 @@ public class BaseClass {
 			driver = new ChromeDriver();
 			System.out.println("----- "+BROWSER+" Launched succesfully-----");
 			
-		} else if (BROWSER.equalsIgnoreCase("edge")) 
+		} else if (BROWSER.equalsIgnoreCase("firefox")) 
 		{
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
+			WebDriverManager.firefoxdriver().setup();
+			driver = new FirefoxDriver();
 			System.out.println("----- "+BROWSER+" Launched successfully-----");
 			
 		} else 
