@@ -8,11 +8,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+//import io.github.bonigarcia.wdm.WebDriverManager;
 import com.vtiger.genericUtilities.ExcelFileUtility;
 import com.vtiger.genericUtilities.JavaUtility;
 import com.vtiger.genericUtilities.PropertyFileUtility;
 import com.vtiger.webDriverUtilities.*;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class DemoTestScriptWithDDTAndGU {
 		
