@@ -4,7 +4,9 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -53,13 +55,18 @@ public class BaseClass {
 		if (BROWSER.equalsIgnoreCase("chrome")) 
 		{
 			System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
+			 ChromeOptions options = new ChromeOptions();
+					    options.addArguments("--no-sandbox");
+					    driver = new ChromeDriver(options);
 			driver = new ChromeDriver();
 			System.out.println("----- "+BROWSER+" Launched succesfully-----");
 			
 		} else if (BROWSER.equalsIgnoreCase("firefox")) 
 		{
 			System.setProperty("webdriver.firefox.driver", ".//geckodriver.exe");
-			driver = new FirefoxDriver();
+			FirefoxOptions fo= new FirefoxOptions();
+			fo.addArguments("--no-sandbox");
+			driver = new FirefoxDriver(fo);
 			System.out.println("----- "+BROWSER+" Launched successfully-----");
 			
 		} else 
