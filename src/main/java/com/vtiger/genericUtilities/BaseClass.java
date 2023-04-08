@@ -52,13 +52,13 @@ public class BaseClass {
 		// Step 2: Launch the browser - runtime polymorphism
 		if (BROWSER.equalsIgnoreCase("chrome")) 
 		{
-			WebDriverManager.chromedriver().setup();
+			System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
 			driver = new ChromeDriver();
 			System.out.println("----- "+BROWSER+" Launched succesfully-----");
 			
 		} else if (BROWSER.equalsIgnoreCase("firefox")) 
 		{
-			WebDriverManager.firefoxdriver().setup();
+			System.setProperty("webdriver.firefox.driver", ".//geckodriver.exe");
 			driver = new FirefoxDriver();
 			System.out.println("----- "+BROWSER+" Launched successfully-----");
 			

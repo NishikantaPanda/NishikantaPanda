@@ -14,7 +14,7 @@ public class LoginPractice {
 
 	public static void main(String[] args) {
 		
-		WebDriverManager.chromedriver().setup();
+		WebDriverManager.firefoxdriver().setup();
 		WebDriver driver = new FirefoxDriver();
 		driver.manage().window().maximize();
 		driver.get("http://localhost:8888/");
