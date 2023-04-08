@@ -54,19 +54,17 @@ public class BaseClass {
 		// Step 2: Launch the browser - runtime polymorphism
 		if (BROWSER.equalsIgnoreCase("chrome")) 
 		{
-			System.setProperty("webdriver.chrome.driver", ".//chromedriver.exe");
-			 ChromeOptions options = new ChromeOptions();
-					    options.addArguments("--no-sandbox");
-					    driver = new ChromeDriver(options);
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\RR\\eclipse-workspace\\VtigerCRM__Nishikant(Exp)\\chromedriver.exe");
+			 
+		    driver = new ChromeDriver();
 			driver = new ChromeDriver();
 			System.out.println("----- "+BROWSER+" Launched succesfully-----");
 			
 		} else if (BROWSER.equalsIgnoreCase("firefox")) 
 		{
-			System.setProperty("webdriver.firefox.driver", ".//geckodriver.exe");
-			FirefoxOptions fo= new FirefoxOptions();
-			fo.addArguments("--no-sandbox");
-			driver = new FirefoxDriver(fo);
+			System.setProperty("webdriver.firefox.driver", ".C:\\Users\\RR\\eclipse-workspace\\VtigerCRM__Nishikant(Exp)\\geckodriver.exe");
+			
+			driver = new FirefoxDriver();
 			System.out.println("----- "+BROWSER+" Launched successfully-----");
 			
 		} else 
