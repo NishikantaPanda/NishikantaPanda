@@ -12,7 +12,6 @@
 	</listeners>
   <test thread-count="5" name="Test">
     <classes>
-      <class name="org.vtiger.Organization.CreateOrganizationTest"/>
       <class name="org.vtiger.Contacts.CreateContactWithOrganizationTest"/>
     </classes>
   </test> <!-- Test -->

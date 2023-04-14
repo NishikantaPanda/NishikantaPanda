@@ -35,7 +35,7 @@ public class BaseClass {
 	public JavaUtility jUtil = new JavaUtility();
 	public static WebDriver sDriver; //listeners
 	
-	public WebDriver driver;
+	public WebDriver driver=null;
 	
 	@BeforeSuite(groups = {"SmokeSuite","RegressionSuite"})
 	public void bsConfig()
@@ -54,16 +54,13 @@ public class BaseClass {
 		// Step 2: Launch the browser - runtime polymorphism
 		if (BROWSER.equalsIgnoreCase("chrome")) 
 		{
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\RR\\eclipse-workspace\\VtigerCRM__Nishikant(Exp)\\chromedriver.exe");
-			 
+			WebDriverManager.chromedriver().setup();
 		    driver = new ChromeDriver();
-			driver = new ChromeDriver();
 			System.out.println("----- "+BROWSER+" Launched succesfully-----");
 			
 		} else if (BROWSER.equalsIgnoreCase("firefox")) 
 		{
-			System.setProperty("webdriver.firefox.driver", ".C:\\Users\\RR\\eclipse-workspace\\VtigerCRM__Nishikant(Exp)\\geckodriver.exe");
-			
+			WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 			System.out.println("----- "+BROWSER+" Launched successfully-----");
 			
